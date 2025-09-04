@@ -47,7 +47,7 @@ function Navbar({ className }: { className?: string }) {
             </Link>
           ))}
         </div>
-        <button className="shadow-acternity mx-4 hidden items-center gap-1 rounded-4xl px-4 py-1 text-sm text-neutral-700 transition duration-200 text-shadow-xs hover:bg-white/40 md:flex">
+        <button className="shadow-acternity mx-4 flex items-center gap-1 rounded-4xl px-4 py-1 text-sm text-neutral-700 transition duration-200 text-shadow-xs hover:bg-white/40 md:flex">
           <a href="mailto:bhardwaj03aryan@gmail.com">Email</a>
           <Mail size={16} color="#FF637E" />
         </button>
