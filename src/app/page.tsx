@@ -1,13 +1,15 @@
-import { Button } from "@/components/ui/button";
-
-
+import { Container } from "@/components/Container";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div>
-      <main className="flex flex-col h-screen items-center justify-center">
-       <Button variant={`custom`}>Hello</Button>
-      </main>
+    <div className="bg-gradient-to-b from-white via-blue-300 to-white ">
+      <Container>
+        <main>
+          <Hero />
+        </main>
+      </Container>
     </div>
   );
 }
