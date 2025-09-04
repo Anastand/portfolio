@@ -1,10 +1,14 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { MenuIcon } from "lucide-react";
+import { GithubIcon, Mail, MenuIcon } from "lucide-react";
 import { useState } from "react";
 function Navbar({ className }: { className?: string }) {
   const links = [
+    {
+      title: "Home",
+      href: "/",
+    },
     {
       title: "About",
       href: "/about",
@@ -27,17 +31,19 @@ function Navbar({ className }: { className?: string }) {
           className,
         )}
       >
-        {/* add github icon here <svg> */}
-        <Link
-          href="https://github.com/anastand/"
-          className="mx-4 text-sm font-medium text-neutral-700"
-        >
-          Anastand
-        </Link>
+        <div className="mx-4 flex items-center rounded-4xl px-4 py-1 shadow-md transition duration-200 hover:bg-white/40">
+          <GithubIcon size={14} />
+          <Link
+            href="https://github.com/anastand/"
+            className="text-sm font-medium text-neutral-700 text-shadow-xs"
+          >
+            Anastand
+          </Link>
+        </div>
         <div className="hidden items-center gap-4 text-sm text-neutral-500 md:flex">
           {links.map((link, id) => (
             <Link
-              className="hover:font-medium hover:text-neutral-900"
+              className="transition duration-200 hover:font-medium hover:text-neutral-900 hover:shadow-xs"
               href={link.href}
               key={id}
             >
@@ -45,10 +51,10 @@ function Navbar({ className }: { className?: string }) {
             </Link>
           ))}
         </div>
-        <button className="mx-4 hidden items-center text-sm font-medium text-neutral-700 md:flex">
+        <button className="shadow-acternity mx-4 hidden items-center gap-1 rounded-4xl px-4 py-1 text-sm text-neutral-700 transition duration-200 text-shadow-xs hover:bg-white/40 md:flex">
           <a href="mailto:bhardwaj03aryan@gmail.com">Email</a>
+          <Mail size={16} color="#FF637E" />
         </button>
-        {/* add email icon here <svg> */}
         <button
           onClick={() => {
             setIsopen(!isopen);
@@ -58,11 +64,11 @@ function Navbar({ className }: { className?: string }) {
           <MenuIcon />
         </button>
         {isopen && (
-          <div className="shadow-acternity absolute top-16 inset-x-0 mx-auto w-full rounded-4xl bg-white/30">
+          <div className="shadow-acternity absolute inset-x-0 top-16 mx-auto w-full rounded-4xl bg-white/40 shadow-blue-200">
             <div className="flex flex-col items-center gap-4 text-sm text-neutral-500">
               {links.map((link, id) => (
                 <Link
-                  className="font-medium text-neutral-700"
+                  className="font-medium text-neutral-700 text-shadow-md"
                   href={link.href}
                   key={id}
                 >
