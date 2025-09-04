@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 export function Container({
   children,
   className,
@@ -7,8 +8,6 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={`bg-amber-300 max-w-2xl m-auto h-screen ${className}`}>
-      {children}
-    </div>
+    <div className={cn("mx-auto max-w-4xl px-4 w-full", className)}>{children}</div>
   );
 }
