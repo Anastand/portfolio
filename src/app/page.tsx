@@ -5,9 +5,9 @@ export default function Home() {
   // working with the homepage rn
 
   return (
-    <div className="mx-auto w-full max-w-4xl px-4 h-screen">
-      <Navbar className="" />
-      <Hero className="mt-16"/>
+    <div className="mx-auto h-screen w-full max-w-4xl px-4">
+      <Navbar /> {/* done with this need to add links for different page */}
+      <Hero className="" />
     </div>
   );
 }

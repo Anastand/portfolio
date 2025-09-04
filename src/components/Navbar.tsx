@@ -6,10 +6,6 @@ import { useState } from "react";
 function Navbar({ className }: { className?: string }) {
   const links = [
     {
-      title: "Home",
-      href: "/",
-    },
-    {
       title: "About",
       href: "/about",
     },
@@ -32,9 +28,9 @@ function Navbar({ className }: { className?: string }) {
         )}
       >
         <div className="mx-4 flex items-center rounded-4xl px-4 py-1 shadow-md transition duration-200 hover:bg-white/40">
-          <GithubIcon size={14} />
           <Link
-            href="https://github.com/anastand/"
+            // href="https://github.com/anastand/"
+            href="/"
             className="text-sm font-medium text-neutral-700 text-shadow-xs"
           >
             Anastand
