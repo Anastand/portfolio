@@ -1,10 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-function Navbar({ className }: { className?: String }) {
+function Navbar({ className }: { className?: string }) {
   const links = [
     {
       title: "About",
@@ -59,11 +58,11 @@ function Navbar({ className }: { className?: String }) {
           <MenuIcon />
         </button>
         {isopen && (
-          <div className="shadow-acternity absolute right-1 top-16 rounded-4xl bg-white/30 mx-auto w-[30%]  ">
+          <div className="shadow-acternity absolute top-16 right-1 mx-auto w-[30%] rounded-4xl bg-white/30">
             <div className="flex flex-col items-center gap-4 text-sm text-neutral-500">
               {links.map((link, id) => (
                 <Link
-                  className="font-medium text-neutral-600"
+                  className="font-medium text-neutral-700"
                   href={link.href}
                   key={id}
                 >
