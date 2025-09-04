@@ -60,7 +60,7 @@ function Navbar({ className }: { className?: string }) {
           <MenuIcon />
         </button>
         {isopen && (
-          <div className="shadow-acternity absolute inset-x-0 top-16 mx-auto w-full rounded-4xl bg-white/40 shadow-blue-200">
+          <div className="shadow-acternity absolute inset-x-0 top-18 mx-auto w-full rounded-4xl bg-white/40 p-2 shadow-blue-200">
             <div className="flex flex-col items-center gap-4 text-sm text-neutral-500">
               {links.map((link, id) => (
                 <Link
