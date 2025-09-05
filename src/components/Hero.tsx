@@ -6,13 +6,13 @@ function Hero({ className }: { className?: string }) {
   return (
     <section
       className={cn(
-        "shadow-acternity mx-auto mt-32 flex max-w-4xl flex-col gap-2 rounded-xl border border-[#b8dcffe1] p-8",
+        "shadow-acternity mx-auto flex max-w-4xl flex-col gap-2 rounded-xl border border-[#b8dcffe1] p-8 lg:mt-4",
         className,
       )}
     >
       {/* Name */}
       <div className="flex w-full items-center justify-between">
-        <h1 className="text-xl font-bold tracking-tight md:text-6xl">
+        <h1 className="text-3xl font-bold tracking-tight text-shadow-lg md:text-6xl">
           Aryan Bhardwaj
         </h1>
         {/* Links / CTAs */}
@@ -36,8 +36,9 @@ function Hero({ className }: { className?: string }) {
       </div>
       {/* Intro */}
       <div className="flex items-start">
-        <p className="w-full text-xs tracking-tight text-neutral-500 md:text-lg">
-          I&apos;m Full-Stack Web Developer. I have been programming for while. I try to create professional websites.
+        <p className="w-full text-xs tracking-tight text-neutral-500 text-shadow-xs text-shadow-zinc-600/20 md:text-lg">
+          I&apos;m Full-Stack Web Developer. I have been programming for while.
+          I try to create professional websites.
         </p>
       </div>
     </section>

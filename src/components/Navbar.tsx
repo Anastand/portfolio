@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { GithubIcon, Mail, MenuIcon } from "lucide-react";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 function Navbar({ className }: { className?: string }) {
   const links = [
     {
@@ -28,6 +29,7 @@ function Navbar({ className }: { className?: string }) {
         )}
       >
         <div className="mx-4 flex items-center rounded-4xl px-4 py-1 shadow-md transition duration-200 hover:bg-white/40">
+          <ThemeToggle />
           <Link
             // href="https://github.com/anastand/"
             href="/"

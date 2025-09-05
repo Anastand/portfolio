@@ -15,7 +15,7 @@ import {
   SiVercel,
   SiFramer,
 } from "react-icons/si";
-import { Palette } from "lucide-react"; // moved import to top
+import { LucidePlayCircle, Palette } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Badge from "./ui/badge";
 
@@ -34,7 +34,7 @@ function Workwith({ className }: { className?: string }) {
     { title: "Node.js", icon: SiNodedotjs },
     { title: "Express", icon: SiExpress },
     { title: "GraphQL", icon: SiGraphql },
-    { title: "REST APIs", icon: null },
+    { title: "REST APIs", icon: LucidePlayCircle },
     { title: "Prisma", icon: SiPrisma },
   ];
 
@@ -64,7 +64,7 @@ function Workwith({ className }: { className?: string }) {
         className,
       )}
     >
-      <h1 className="text-3xl font-extrabold tracking-tight">
+      <h1 className="text-2xl font-bold tracking-tight text-shadow-md md:text-4xl">
         What I Work With
       </h1>
 
@@ -73,7 +73,7 @@ function Workwith({ className }: { className?: string }) {
         <div className="flex flex-col">
           {/* Frontend */}
           <div className="mt-2">
-            <h2 className="text-lg">Frontend</h2>
+            <h2 className="text-sm md:text-xl">Frontend</h2>
             {frontendTechnologies.map((tech, id) => (
               <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
@@ -84,7 +84,7 @@ function Workwith({ className }: { className?: string }) {
 
           {/* Backend */}
           <div className="mt-2">
-            <h2 className="text-lg">Backend</h2>
+            <h2 className="text-sm md:text-xl">Backend</h2>
             {backendTechnologies.map((tech, id) => (
               <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
@@ -95,7 +95,7 @@ function Workwith({ className }: { className?: string }) {
 
           {/* Database */}
           <div className="mt-2">
-            <h2 className="text-lg">Database</h2>
+            <h2 className="items-center text-sm md:text-xl">Database</h2>
             {databaseTechnologies.map((tech, id) => (
               <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
@@ -109,7 +109,7 @@ function Workwith({ className }: { className?: string }) {
         <div className="flex flex-col">
           {/* DevOps / Tools */}
           <div className="mt-2">
-            <h2 className="text-lg">DevOps / Tools</h2>
+            <h2 className="text-sm md:text-xl">DevOps / Tools</h2>
             {devopsTechnologies.map((tech, id) => (
               <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
@@ -120,7 +120,7 @@ function Workwith({ className }: { className?: string }) {
 
           {/* UI / Extras */}
           <div className="mt-2">
-            <h2 className="text-lg">UI / Extras</h2>
+            <h2 className="text-sm md:text-xl">UI / Extras</h2>
             {otherTechnologies.map((tech, id) => (
               <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ThemeProviderClient from "@/components/ThemeProviderClient";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-gradient-to-b from-white via-blue-300 antialiased`}>
-        <Navbar className="max-w-4xl px-8" />
-        {children}
+      <body className={`antialiased`}>
+        <ThemeProviderClient>
+          <Navbar className="max-w-4xl px-8" />
+          {children}
+        </ThemeProviderClient>
       </body>
     </html>
   );

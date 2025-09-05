@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Projects from "@/components/Porjects";
 import Timeline from "@/components/Timeline";
 
 import Workwith from "@/components/Workwith";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero className="" /> {/* done with this */}
       <Workwith className="" /> {/* done with this */}
       <Timeline className="" />
+      <Projects />
     </div>
   );
 }
