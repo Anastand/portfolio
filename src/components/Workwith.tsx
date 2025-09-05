@@ -1,107 +1,145 @@
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiGraphql,
+  SiPostgresql,
+  SiMongodb,
+  SiPrisma,
+  SiGit,
+  SiGithub,
+  SiVercel,
+  SiFramer,
+} from "react-icons/si";
+import { Palette } from "lucide-react"; // moved import to top
 import { cn } from "@/lib/utils";
 import Badge from "./ui/badge";
 
 function Workwith({ className }: { className?: string }) {
   // Frontend stack
   const frontendTechnologies = [
-    { title: "Next.js" },
-    { title: "React" },
-    { title: "TypeScript" },
-    { title: "JavaScript" },
-    { title: "Tailwind CSS" },
-    // { title: "GSAP" },
+    { title: "Next.js", icon: SiNextdotjs },
+    { title: "React", icon: SiReact },
+    { title: "TypeScript", icon: SiTypescript },
+    { title: "JavaScript", icon: SiJavascript },
+    { title: "Tailwind CSS", icon: SiTailwindcss },
   ];
 
   // Backend stack
   const backendTechnologies = [
-    { title: "Node.js" },
-    { title: "Express" },
-    { title: "GraphQL" },
-    { title: "REST APIs" },
-    { title: "Prisma" },
+    { title: "Node.js", icon: SiNodedotjs },
+    { title: "Express", icon: SiExpress },
+    { title: "GraphQL", icon: SiGraphql },
+    { title: "REST APIs", icon: null },
+    { title: "Prisma", icon: SiPrisma },
   ];
 
   // Databases
-  const databaseTechnologies = [{ title: "MongoDB" }, { title: "PostgreSQL" }];
+  const databaseTechnologies = [
+    { title: "MongoDB", icon: SiMongodb },
+    { title: "PostgreSQL", icon: SiPostgresql },
+  ];
 
   // DevOps / Tools
   const devopsTechnologies = [
-    { title: "Git" },
-    { title: "GitHub" },
-    { title: "Vercel" },
+    { title: "Git", icon: SiGit },
+    { title: "GitHub", icon: SiGithub },
+    { title: "Vercel", icon: SiVercel },
   ];
 
   // UI / Extras
   const otherTechnologies = [
-    { title: "Lucide React" },
-    { title: "Framer Motion" },
+    { title: "Lucide React", icon: Palette },
+    // { title: "Framer Motion", icon: SiFramer },
   ];
+
   return (
-    <div className={cn("mx-auto mt-4 max-w-4xl p-8 shadow-acternity rounded-4xl", className)}>
+    <div
+      className={cn(
+        "shadow-acternity mx-auto mt-4 max-w-4xl rounded-4xl p-8",
+        className,
+      )}
+    >
       <h1 className="text-3xl font-extrabold tracking-tight">
         What I Work With
       </h1>
-      <div className="md:flex justify-between px-2">
-        {/* frontend */}
-        <div className=" flex flex-col">
+
+      <div className="justify-between px-2 md:flex">
+        {/* Left Column */}
+        <div className="flex flex-col">
+          {/* Frontend */}
           <div className="mt-2">
-            <h1 className="text-lg">Frontend</h1>
-            {frontendTechnologies.map((frnt, id) => (
+            <h2 className="text-lg">Frontend</h2>
+            {frontendTechnologies.map((tech, id) => (
               <Badge
                 key={id}
-                className="shadow-acternity mx-1 mt-1 inline-grid rounded-4xl border-2 border-blue-200 bg-white/20 px-1 py-1 text-xs"
+                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
               >
-                {frnt.title}
+                {tech.icon && <tech.icon className="h-4 w-4" />}
+                {tech.title}
               </Badge>
             ))}
           </div>
-          {/* backend */}
+
+          {/* Backend */}
           <div className="mt-2">
-            <h1 className="text-lg">Backend</h1>
-            {backendTechnologies.map((bck, id) => (
+            <h2 className="text-lg">Backend</h2>
+            {backendTechnologies.map((tech, id) => (
               <Badge
                 key={id}
-                className="shadow-acternity mx-1 mt-1 inline-grid rounded-4xl border-2 border-blue-200 bg-white/20 px-1 py-1 text-xs"
+                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
               >
-                {bck.title}
+                {tech.icon && <tech.icon className="h-4 w-4" />}
+                {tech.title}
               </Badge>
             ))}
           </div>
-          {/* database */}
+
+          {/* Database */}
           <div className="mt-2">
-            <h1 className="text-lg">Database</h1>
-            {databaseTechnologies.map((dbs, id) => (
+            <h2 className="text-lg">Database</h2>
+            {databaseTechnologies.map((tech, id) => (
               <Badge
                 key={id}
-                className="shadow-acternity mx-1 mt-1 inline-grid rounded-4xl border-2 border-blue-200 bg-white/20 px-1 py-1 text-xs"
+                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
               >
-                {dbs.title}
+                {tech.icon && <tech.icon className="h-4 w-4" />}
+                {tech.title}
               </Badge>
             ))}
           </div>
         </div>
-        <div className="felx felx-col">
+
+        {/* Right Column */}
+        <div className="flex flex-col">
           {/* DevOps / Tools */}
           <div className="mt-2">
-            <h1 className="text-lg">DevOps / Tools</h1>
-            {devopsTechnologies.map((dks, id) => (
+            <h2 className="text-lg">DevOps / Tools</h2>
+            {devopsTechnologies.map((tech, id) => (
               <Badge
                 key={id}
-                className="shadow-acternity mx-1 mt-1 inline-grid rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
+                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
               >
-                {dks.title}
+                {tech.icon && <tech.icon className="h-4 w-4" />}
+                {tech.title}
               </Badge>
             ))}
           </div>
+
           {/* UI / Extras */}
           <div className="mt-2">
-            <h1 className="text-lg">UI / Extras</h1>
-            {devopsTechnologies.map((ui, id) => (
+            <h2 className="text-lg">UI / Extras</h2>
+            {otherTechnologies.map((tech, id) => (
               <Badge
                 key={id}
-                className="shadow-acternity mx-1 mt-1 inline-grid rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
+                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
               >
-                {ui.title}
+                {tech.icon && <tech.icon className="h-4 w-4" />}
+                {tech.title}
               </Badge>
             ))}
           </div>

@@ -8,12 +8,12 @@ export default function Home() {
   // working with the homepage rn
 
   return (
+    // after completing this maybe look for how to make this look cool
     <div className="mx-auto h-screen w-full max-w-4xl p-8">
       <BGPattern variant="dots" mask="fade-center">
-        <Navbar className="max-w-4xl px-8" />{" "}
         {/* done with this need to add links for different page */}
-        <Hero className="" />
-        <Workwith className="" />
+        <Hero className="" /> {/* done with this */}
+        <Workwith className="" /> {/* done with this */}
       </BGPattern>
     </div>
   );
