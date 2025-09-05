@@ -8,5 +8,14 @@ export default function Badge({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <div className={cn("", className)}>{children}</div>;
+  return (
+    <span
+      className={cn(
+        "shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs",
+        className,
+      )}
+    >
+      {children}
+    </span>
+  );
 }

@@ -75,10 +75,7 @@ function Workwith({ className }: { className?: string }) {
           <div className="mt-2">
             <h2 className="text-lg">Frontend</h2>
             {frontendTechnologies.map((tech, id) => (
-              <Badge
-                key={id}
-                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
-              >
+              <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
                 {tech.title}
               </Badge>
@@ -89,10 +86,7 @@ function Workwith({ className }: { className?: string }) {
           <div className="mt-2">
             <h2 className="text-lg">Backend</h2>
             {backendTechnologies.map((tech, id) => (
-              <Badge
-                key={id}
-                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
-              >
+              <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
                 {tech.title}
               </Badge>
@@ -103,10 +97,7 @@ function Workwith({ className }: { className?: string }) {
           <div className="mt-2">
             <h2 className="text-lg">Database</h2>
             {databaseTechnologies.map((tech, id) => (
-              <Badge
-                key={id}
-                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
-              >
+              <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
                 {tech.title}
               </Badge>
@@ -120,10 +111,7 @@ function Workwith({ className }: { className?: string }) {
           <div className="mt-2">
             <h2 className="text-lg">DevOps / Tools</h2>
             {devopsTechnologies.map((tech, id) => (
-              <Badge
-                key={id}
-                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
-              >
+              <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
                 {tech.title}
               </Badge>
@@ -134,10 +122,7 @@ function Workwith({ className }: { className?: string }) {
           <div className="mt-2">
             <h2 className="text-lg">UI / Extras</h2>
             {otherTechnologies.map((tech, id) => (
-              <Badge
-                key={id}
-                className="shadow-acternity mx-1 mt-1 inline-flex items-center gap-2 rounded-4xl border-2 border-blue-200 bg-white/20 px-2 py-1 text-xs"
-              >
+              <Badge key={id}>
                 {tech.icon && <tech.icon className="h-4 w-4" />}
                 {tech.title}
               </Badge>
