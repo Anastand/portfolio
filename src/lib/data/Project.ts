@@ -53,5 +53,6 @@ export const projectItems: ProjectItem[] = [
     tech: ["React", "JavaScript", "Vite/CRA"],
     repo: "https://github.com/anastand/React-Projects",
     logo: "/logos/react-projects.png",
+    demo: "https://react-projects-alpha-weld.vercel.app/",
   },
 ];

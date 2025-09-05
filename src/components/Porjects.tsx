@@ -9,33 +9,37 @@ export default function Projects({ className }: { className?: string }) {
         Projects
       </h1>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2">
         {projectItems.map((project) => (
           <div
             key={project.id}
-            className="shadow-acternity rounded-xl border border-white/20 bg-amber-300 p-4 dark:border-neutral-800 dark:bg-neutral-900/40"
+            className={cn(
+              // glass but opaque white
+              "shadow-acternity rounded-2xl border border-neutral-200 bg-white/90 p-6 backdrop-blur-sm",
+              "transition hover:scale-[1.01] hover:shadow-lg",
+            )}
           >
             {/* Title + Year */}
-            <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-100">
+            <h2 className="text-lg font-semibold text-neutral-900">
               {project.title}{" "}
               {project.year && (
-                <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                <span className="text-sm text-neutral-500">
                   ({project.year})
                 </span>
               )}
             </h2>
 
             {/* Description */}
-            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+            <p className="mt-2 text-sm text-neutral-700">
               {project.description}
             </p>
 
             {/* Tech Stack */}
-            <div className="mt-3 flex flex-wrap gap-1">
+            <div className="mt-3 flex flex-wrap gap-2">
               {project.tech?.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full bg-white/70 px-2 py-0.5 text-[10px] font-medium text-blue-700 ring-1 ring-white/60 dark:bg-neutral-800 dark:text-blue-300 dark:ring-neutral-700"
+                  className="rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-700"
                 >
                   {t}
                 </span>
@@ -43,13 +47,13 @@ export default function Projects({ className }: { className?: string }) {
             </div>
 
             {/* Links */}
-            <div className="mt-3 flex gap-3 text-sm">
+            <div className="mt-4 flex gap-4 text-sm">
               {project.repo && (
                 <a
                   href={project.repo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline dark:text-blue-400"
+                  className="font-medium text-blue-600 hover:underline"
                 >
                   GitHub
                 </a>
@@ -59,7 +63,7 @@ export default function Projects({ className }: { className?: string }) {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline dark:text-blue-400"
+                  className="font-medium text-blue-600 hover:underline"
                 >
                   Live Demo
                 </a>

@@ -1,7 +1,8 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import ThemeProviderClient from "@/components/ThemeProviderClient";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -10,16 +11,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <ThemeProviderClient>
-          <Navbar className="max-w-4xl px-8" />
-          {children}
-        </ThemeProviderClient>
+      <body className=" min-h-screen antialiased">
+        {/* Navbar at the top */}
+        <Navbar className="mx-auto w-full max-w-4xl px-8" />
+
+        {/* Main grows to push footer down */}
+        {children}
+
+        {/* Footer always sticks at bottom */}
+        <Footer />
       </body>
     </html>
   );
